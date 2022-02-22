@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>basic</title>
+</head>
+<body>
+<button onclick="foot_metter()">foot_metter</button>
+<button onclick="metter_foot()">metter_foot</button>
+</body>
+<script>
+    function foot_metter(){
+        k=parseFloat(prompt('Nhập giá trị foot:  '))
+        result=k*0.305;
+        alert('giá trị sau chuyển đổi là :'+result+'  m')
+    }
+    function metter_foot(){
+        k=parseFloat(prompt('Nhập giá trị metter:  '))
+        result=k*3.279
+        alert('giá trị sau chuyển đổi là :'+result+'  foot')
+    }
+</script>
+</html>

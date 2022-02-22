@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Feet To Meter Converter</h1>
+<input type="number" id="feet" oninput="calculateMeter()" /> Feet to Meter is:
+<span id="feetToMeter"></span>
+<!--tạo ra một nơi để in giá trị và dễ dàng thay đổi bằng css, js    https://www.w3schools.com/tags/tag_span.asp  -->
+<br/><br/><br/>
+<h1>Meter To Feet Converter</h1>
+<input type="number" id="meter" oninput="calculateFeet()" /> Meter to Feet is:
+<span id="meterToFeet"></span>
+
+
+<script>
+    function feetToMeter(feet) {
+        meter = 0.305 * feet;
+        return meter.toFixed(3)
+    }
+
+    function meterToFeet(meter) {
+        feet = meter / 0.305;
+        return feet.toFixed(3)
+    }
+
+    function calculateMeter() {
+        let input = document.getElementById('feet').value;
+        let result = `${feetToMeter(input)} Meter`;
+        document.getElementById('feetToMeter').innerHTML = result;
+    }
+
+    function calculateFeet() {
+        let input = document.getElementById('meter').value;
+        let result = `${meterToFeet(input)} Feet`;
+        document.getElementById('meterToFeet').innerHTML = result;
+    }
+</script>
+</body>
+</html>
